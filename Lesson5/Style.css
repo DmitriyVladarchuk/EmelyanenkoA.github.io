@@ -14,7 +14,6 @@ header {
 }
 
 body {
-
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -34,10 +33,7 @@ footer {
     border-radius: 5%;
 }
 
-
-
 .zagolovok {
-    margin-left: 20px;
     color: #000;
     font-family: sans-serif;
     text-align: center;
@@ -62,6 +58,7 @@ footer {
 input {
     font-size: 1em;
 }
+
 .navigation a {
     color: white;
     padding: 14px 16px;
@@ -149,6 +146,7 @@ img {
 }
 
 
+
 @media screen and (min-width: 321px) {
     body {
         font-size: 20px;
@@ -157,12 +155,31 @@ img {
         flex-direction: column;
     }
 }
+
+@media screen and (min-width: 390px) {
+    body {
+        font-size: 21px;
+    }
+    .navigation ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 430px) {
+    body {
+        font-size: 22px;
+    }
+    .navigation ul {
+        flex-direction: column;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .logoPNG {
         width: 200px;
     }
     body {
-        font-size: 26px;
+        font-size: 24px;
     }
     .navigation ul {
         flex-direction: column;
@@ -174,7 +191,7 @@ img {
 @media screen and (min-width: 769px) {
     .navigation ul {
         font-size: 0.8em;
-        flex-direction: column;
+        flex-direction: row;
     }
     .navigation ul li {
         margin-right: 30px;
@@ -236,7 +253,8 @@ img {
         padding: 6px 10px;
     }
     input.formAd {
-        width: 8em;
+        width: 10em;
+        
     }
     label{
         font-size: 1.4em;
