@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Задание 6 </title>
+    <link rel="stylesheet" href="Style.css">
+    <script src = "Script.js" defer></script>
+</head>
+<body>
+  <header class = "mb-2">
+      <div class="logo">
+        <img src="logo.png" alt="Логотип" class = "logoPNG">
+      </div>
+      <div class="zagolovok">
+        <h1> На данной странице будут предоставленны различные виды гиперссылок </h1>
+    </div>
+  </header>
+  <nav class = "navigation">
+    <ul class = "navhref">
+      <li><a class = "m-1 nav-link" href="#figuri"> Ссылка на фигуры </a></li>
+      <li><a class = "m-1 nav-link" href="#form1"> Ссылка на форму </a></li>
+      <li><a class = "m-1 nav-link" href="#sendButton"> Ссылка на кнопку отправить </a></li>
+    </ul>
+  </nav>
+  <section class = "m-2">
+  <div class="content">
+    <h2> Список гиперссылок </h2>
+    <ol>
+        <li>
+          <a href="http://kubsu.ru/"> Абсолютная гиперссылка на главную страницу сайта </a>
+        </li>
+        <li>
+          <a href="https://www.kubsu.ru/"> Абсолютная на главную сайта в протоколе https </a>
+        </li>
+        <li>
+          <a href="ftp://kubsu.ru/Temp/file.txt"> Ссылка на файл на сервере FTP без авторизации </a>
+        </li>
+        <li>
+          <a href="ftp://user1:pasword123@kubsu.ru/Temp/file.txt"> Ссылка на файл на сервере FTP с авторизацией </a>
+        </li>
+        <li>
+          <a href="https://ru.wikipedia.org/wiki/Медведи#Общее_описание"> Ссылка на фрагмент страницы некоторого сайта </a>
+        </li>
+        <li>
+          <a href= "#about"> Ссылку на фрагмент текущей страницы </a>
+        </li>
+        <li>
+          <a href="https://kubsu.ru/ru/education/programs"> Ссылка с двумя параметрами в URL </a>
+        </li>
+        <li> Список ссылок основной навигации сайта с подписями title
+          <ol>
+          <li>
+            <a href="https://www.kubsu.ru/" title="Ссылка на главную страницу КубГУ"> КубГУ </a>
+          </li>
+          <li>
+            <a href="https://kubsu.ru/ru/education" title="Ссылка на раздел Образование"> КубГУ раздел Образование </a>
+          </li>
+          <li>
+            <a href="https://kubsu.ru/ru/science" title="Ссылка на Наука и Инновации"> КубГУ раздел Наука и Инновации </a>
+          </li>
+        </ol>
+      </li>
+        <li>
+          <a> Ссылка без href: http://kubsu.ru/ </a>
+        </li>
+        <li>
+          <a href=""> Cсылка с пустым href </a>
+        </li>
+        <li>
+          <a href="http://kubsu.ru/" rel="nofollow"> Ссылка по которой запрещен переход поисковикам </a>
+        </li>
+        <li>
+          <!--noindex--> <a href="http://kubsu.ru/"> Ссылка запрещенная для индексации поисковиками </a> <!--/noindex-->
+          <noscript>
+            <a href="http://kubsu.ru/"> Ссылка запрещенная для индексации поисковиками </a>
+          </noscript>
+        </li>
+        <li>
+          Контекстная ссылка в <a href="http://kubsu.ru/"> тексте абзаца</a>
+        </li>
+        <li>
+          Ссылка изоображение
+          <br>
+          <a href ="http://kubsu.ru"> <img src="PNGURL.jpeg" alt="фотоизоображение" width="200" height="110"> </a>
+        </li>
+        <li id = "figuri"> ссылки из прямоугольных и круглых областей картинки (HTML-тег map)
+          <br>
+		<img src = "Map.jpg" usemap = "#figuri" alt = "Фигуры" width="260" height="150" >
+    <map name = "figuri" >
+      <area shape = "rect" coords = "25,25,125,125" href = "https://ru.wikipedia.org/wiki/Квадрат" alt = "Красный квадрат" >
+			<area shape = "circle" coords = "200,75,50" href = "https://ru.wikipedia.org/wiki/Круг" alt = "Зелёный круг." >
+		</map>
+        </li>
+        <li>
+          <a href="/about"> Относительная на страницу в текущем каталоге </a>
+        </li>
+        <li>
+          <a href="/about/page1"> Относительная на страницу в каталоге about </a>
+        </li>
+        <li>
+          <a href="../main.js"> Относительная на страницу в каталоге уровнем выше текущего </a>
+        </li>
+        <li>
+          <a href="../../style.css"> Относительная на страницу в каталоге двумя уровнями выше </a>
+        </li>
+        <li>
+          <a href="https://u.to/y_xJHA"> Сокращенная на главную страницу КубГУ </a>
+        </li>
+        <li>
+          <a href="https://u.to/0uxJHA"> Сокращенная ссылку на внутреннюю </a>
+        </li>
+    </ol>
+    <br>
+    <div class="container__table bg-light p-2 mt-2 order-3 order-sm-2">
+    <table id = "table">
+        <tr class = "tab0">
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+        </tr>
+        <tbody>
+            <tr class = "tab1">
+                <td colspan = "3">Объединённая ячейка 1, 2, 3</td>
+            </tr>
+            <tr class = "tab2">
+                <td>Ячейка 4</td>
+                <td>Ячейка 5</td>
+                <td>Ячейка 6</td>
+            </tr>
+            <tr class = "tab1">
+                <td>Ячейка 7</td>
+                <td>Ячейка 8</td>
+                <td>Ячейка 9</td>
+            </tr>
+            <tr class = "tab2">
+                <td colspan = "3">Объединённая ячейка 10, 11, 12</td>
+            </tr>
+            <tr class = "tab1">
+                <td>Ячейка 13</td>
+                <td>Ячейка 14</td>
+                <td>Ячейка 15</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    </div>
+    <h3> Форма </h3>
+    <div class="container__form p-2 mt-2 order-2 bg-light order-sm-3">
+    <form action="/" method="post" id = "form1">
+      <label>
+         Имя(Текстовое поле):
+         <br>
+         <input type="text" class = "formAd" name="Name" value="">
+      </label>
+      <br>
+      <label>
+        <br>
+        E-mail поле:
+        <br>
+        <input type="email" class = "formAd" name="emailfield" placeholder="Введите вашу почту:">
+      </label>
+      <br>
+      <label>
+        <br>
+        Текстовое поле даты:
+        <br>
+        <input type="date"  class = "formAd" name="field-date" value="">
+      </label>
+      <br>
+      <label>
+        <br>
+      Пол:
+      <br>
+      </label>
+      <label>
+        М
+        <input type="radio" class = "formAd" name="gender" value="М" >
+      </label>
+      <br>
+      <label>
+        Ж
+        <input type="radio" class = "formAd" name="gender" value="Ж" >
+      </label>
+      <br><br>
+      Количество конечностей:
+      <br>
+       <label>
+         2
+         <input type="radio" class = "formAd" name="limbsNumber" value="2">
+       </label>
+       <label>
+         3
+         <input type="radio" class = "formAd" name="limbsNumber" value="3">
+       </label>
+       <label>
+         4
+         <input type="radio" class = "formAd" name="limbsNumber" value="4">
+       </label>
+       <br><br>
+       Сверхспособности:
+       <label>
+       <br>
+       <select name="powers">
+         <option value="Бессмертие"> Бессмертие </option>
+         <option value="Прохождение сквозь стены"> Прохождение сквозь стены </option>
+         <option value="Левитация"> Левитация </option>
+       </select>
+       </label>
+       <label>
+       <br><br>
+       Биография:
+       <br>
+       <textarea name="textfield"></textarea>
+       </label>
+        <br>
+        <label for="contract">
+		      <input id="contract" type="checkbox" name="checkR">
+           	 С контрактом ознакомлен (а)
+        </label>
+
+         <label>
+           <br><br>
+           <input type="submit" name="Send" value="Отправить" id="sendButton">
+         </label>
+    </form>
+  </div>
+
+    <div class="container__calc p-2 mt-2 order-2 bg-light order-sm-4">
+      <article><h4> Калькулятор товара</h4></article>
+      <p>Введите цену товара:
+        <input type="text" name="number1" id="field1" >
+      </p>
+      <p>Введите количество товара:
+        <input type="text" name="number2" id="field2" >
+      </p>
+      <button id = "click" onclick = "task1()" >
+        Посчитать
+      </button>
+      <p id= "output">Итоговая цена: </p>
+    </div>
+
+    <div class= "container__calc2 p-2 mt-2 order-2 bg-light order-sm-4">
+      <label class="zag"> Расширенный калькулятор цены</label>
+      <p>Введите количество товара:
+        <input type="text" name="numberCalc" id="fieldCalc" >
+      </p>
+      
+  Тип товара:
+  <form class = "formaCalc">
+    <select name="prodType">
+      <option value="1">Кнопочный телефон</option>
+      <option value="2">Смартфон</option>
+      <option value="3">Планшет</option>
+    </select>
+    <div id="radios">
+      <label><input type="radio" name="prodOptions" value="option1"> 32GB </label>
+      <label><input type="radio" name="prodOptions" value="option2"> 64GB </label>
+      <label><input type="radio" name="prodOptions" value="option3"> 128GB </label>
+    </div>
+    <div id="checkboxes">
+      <label><input type="checkbox" name="prop1"> Чехол - книга </label>
+      <label><input type="checkbox" name="prop2"> Со стилусом</label>
+    </div>
+    <div id="prodPrice">Выберите тип товара</div>
+  </form>
+    </div>
+
+
+
+  </div>
+  </section>
+    <div id ="footeR" class = "tipicalFooter">
+      <footer><p>(c) Емельяненко Александр 2022 </p></footer>
+    </div>
+</body>
+</html>
