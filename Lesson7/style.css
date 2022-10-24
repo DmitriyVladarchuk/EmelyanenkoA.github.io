@@ -8,16 +8,15 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
 }
 
-footer{
-    background-color:ghostwhite; 
-    height: 60px;
-    box-shadow: 10px 0px 20px 5px navajowhite;
-    color: #000000;
+header{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+    margin-top: 20px;
+    height: 100px;
 }
 
 #gallery{
-	/*color:white;
-	box-shadow: 10px 0px 20px 5px navajowhite;*/
 	background-color:ghostwhite; 
     height: 60px;
     box-shadow: 10px 0px 20px 5px navajowhite;
@@ -28,18 +27,17 @@ footer{
 	min-width: 0;
 }
 
-/* Ограничивающая оболочка */
+
 .slick-list {
 	overflow: hidden;
 }
 
-/* Лента слайдов */
+
 .slick-track{
 	display: flex;
 	align-items: flex-start;
 }
 
-/* Конкретный слайдер */
 .slider {
 	position: relative;
 	padding: 0px 60px;
@@ -57,12 +55,12 @@ footer{
 
 .slider .slick-arrow.slick-prev{
 	left: 0;
-	background: url("img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+	background: url("img/sl-arrow_l.png") 0 0 / 100% no-repeat;
 }
 
 .slider .slick-arrow.slick-next{
 	right: 0;
-	background: url("img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+	background: url("img/sl-arrow_r.png") 0 0 / 100% no-repeat;
 }
 
 .slider .slick-arrow.slick-disabled{
